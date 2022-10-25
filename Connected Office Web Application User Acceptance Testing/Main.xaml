@@ -130,14 +130,14 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange AddHeaders="True" DataTable="[dt_ExcelData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="434,97" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Device" WorkbookPath="C:\Users\GIVEN MNISI\OneDrive - NORTH-WEST UNIVERSITY\Documents\IT\CMPG323\Projects\Project 4\Connected Office Test Data.xlsx">
+      <ui:ReadRange AddHeaders="True" DataTable="[data_ExcelData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="434,97" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Zone" WorkbookPath="C:\Users\GIVEN MNISI\OneDrive - NORTH-WEST UNIVERSITY\Documents\IT\CMPG323\Projects\Project 4\Connected Office Test Data.xlsx">
         <ui:ReadRange.Range>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
           </InArgument>
         </ui:ReadRange.Range>
       </ui:ReadRange>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ExcelData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,341" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[data_ExcelData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,341" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>

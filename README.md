@@ -29,6 +29,10 @@
 ## LoginCredentials
 <img src="/Images/Credentials.PNG" alt="Credentials">
 
+## Log In
+- Also make sure that the AssetName in your Log in Workflow is the same as the one on UiPath Orchestrator
+<img src="/Images/Login.PNG" alt="Login">
+
 ## Phase 1 - GitHub Administration
 - While I'm undergoing training, I've created and configured my GitHub repository.
 
@@ -43,6 +47,16 @@
 ## Phase 4 - Project Close-out
 - Published the UiPath solution to the UiPath Orchestrator.
 <img src="/Images/Publish.PNG" alt="Publish">
+
+## Stretch Task
+- I used different Workflows for each Zone, Category & Devices
+- I created a Log in Workflow whereby you only Log In and linked them with another in the following Flowchart
+<img src="/Images/Task.PNG" alt="Task">
+
+## Arguments
+- In order for the reading of the Excel file in all the Workflows to occur, I initialized a variable and imported it to the each argument in the Flowcharts.
+<img src="/Images/Argument.PNG" alt="Argument">
+
 
 ## Reference List
 - Khan, S., 2020. Comparative analysis of RPA tools-UiPath, automation anywhere and blueprism.<i> International Journal of Computer Science and Mobile Applications, </i> 8(11), pp.1-6.

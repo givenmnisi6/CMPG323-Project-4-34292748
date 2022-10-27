@@ -2,7 +2,6 @@
 
 ## More about the Project
 - Testing is a crucial part of any solution and can be done from many different perspectives. Examples include internal development team testing, business user acceptance testing (UAT), etc.
-- Most development lifecycles contain UAT as a critical stage that serves as the "go/no-go" decision maker. It is concentrated on making sure that the input provided to the solution produces the desired results.
 - Robotic process automation (RPA) it is the use of AI & machine learning to replicate human activities in a manner similar to how a person would carry out a process. Typically, this refers to automation on the "front end" or UI (User Interface). RPA is frequently used to automate laborious, repetitive processes so that workers have more time to focus on creative work. 
 - RPAs are software applications that can configure tasks and automate them. Some popular RPA tools are UiPath, Automation Anywhere, blueprism, PEGA etc.
 
@@ -10,12 +9,7 @@
 Robotic process automation streamlines workflows, which makes organizations more profitable, flexible, and responsive. It also increases employee satisfaction, engagement, and productivity by removing mundane tasks from their workdays.
 - Accelerated transformation: Among global executives, 63% say RPA is a major component in digital transformation.
 - Higher accuracy: 57% say RPA reduces manual errors.
-- Improved compliance: 92% agree RPA has ‘met or exceeded expectations’ for better compliance.
-- Boosted productivity: 68% of global workers believe automation will make them more productive.
-- Happier employees: 57% of executives say RPA increases employee engagement.
 
-## Purpose
-- We'll be looking at Project 3, the solution would need to go through UAT, where a group of "testers" would have a test dataset with input data and intended output data, before it could be deployed into production. The testers will be doing a repetitive job like inserting etc. This would involve engaging in a very repetitious activity that can and ought to be automated utilizing RPA in this situation.
 
 ## Manual for the Project
 
@@ -29,7 +23,6 @@ Robotic process automation streamlines workflows, which makes organizations more
 
 ## Phase 3 - User Acceptance Testing
 - The data from Excel has been read into a table in UiPath and it is readable and iterated over in UiPath.
-- Results have been recorded and UI automation has been completed.
 
 ## Phase 4 - Project Close-out
 - Published the UiPath solution to the UiPath Orchestrator.

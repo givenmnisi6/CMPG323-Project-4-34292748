@@ -1,6 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Update_and_Delete_Zones" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="678,2781" sap2010:WorkflowViewState.IdRef="Update_and_Delete_Zones_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Update_and_Delete_Zones" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="zoneDataIn" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>678,2783</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Update_and_Delete_Zones_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="39">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -36,10 +44,14 @@
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
-    </sco:Collection>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -77,24 +89,37 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="592,2716" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap:VirtualizedContainerService.HintSize="592,2718" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Home Page - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="530,2594" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="66b6ec54-0743-40c5-8968-94a294367ed2" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Home Page - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="530,2596" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="66b6ec54-0743-40c5-8968-94a294367ed2" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2368" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2370" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="variable1" />
-              <Variable x:TypeArguments="sd:DataTable" Name="ZoneData" />
+              <Variable x:TypeArguments="sd:DataTable" Name="ZonesData" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -106,13 +131,13 @@
                 <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/" DesignTimeRectangle="8, 304, 200, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Zones'" FullSelectorArgument="&lt;webctrl aaname='Zones' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Zones' tag='A' type='' class='nav-link text-dark' check:innerText='Zones' /&gt;" Guid="083270ec-0179-4d8f-8f97-ace761a9d28f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIxSURBVHhe7dgxTuNQAIRhDkVFtZeJlI4z0FJwAnoaDkBPQccBKHKH3Qs8IJ6JH37P41hrVmL1j/Q12AkU/mOHC6987PDnN4AOT7kQDJB4yoVggMRTLgQDJJ5yIRgg8ZQLwQCJp1wIBkg85UIwQOIpF4IBEk+5EAyQeMqFYIDEUy4EAySeciEYIPGUC8EAiadcCAZIPOVCMEDiKReCARJPuWwQzMttubz6Fd28dF4H/ACeciEYIPGUyzc9klUR7R7f+ucAP4CnXL4jmOdy47vL9UN5nRx/fdyfYhrsy/2hd/y2PNXv9aG5Ux0eyq46PrxmPL70u4AlnnLZOpi3cn/dv3i/Hms5hvEi35ddc371nrOPgsM5bSyfCAbreMpl22Dqi7S5G1QX+Hisikh3o/o9/DjXvm/1urvn5r0+z3m60/HOXQ44l6dcNgxm4XvLeNHPPTZN7wzVedWj1xDM10e1qePvb+5A3F2wnqdcNgqm/i4x84l++sTfIpjmu8uE7zqd8/gnBNbwlMsWwdTfTcKn+OpHsjPvMKdHsqT3CAcs85TL3wcz3jnmDRd5HVbLEZ0XTH3ehMKb+7vGWIFlnnL5l8HMnZ8f0Y4/7wRz1PtPWQiGWLCWp1w2/NIP/Ic85UIwQOIpF4IBEk+5EAyQeMqFYIDEUy4EAySeciEYIPGUC8EAiadcCAZIPOVCMEDiKReCARJPuRAMkHjKhWCAxFMuBAMknnIhGCDxlAvBAMmwUt4B782ZQ3BW//oAAAAASUVORK5CYII=" InformativeScreenshot="f6967360d91f47fe38d119502c0dac47.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home Page - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ZoneData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,2038" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[zoneDataIn]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,2040" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,1912" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,1914" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="zoneName" />
                       <Variable x:TypeArguments="x:String" Name="zoneDescription" />
@@ -143,7 +168,7 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Zone Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="66b6ec54-0743-40c5-8968-94a294367ed2" Text="[zoneName]" Version="V1">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Zone Name'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="66b6ec54-0743-40c5-8968-94a294367ed2" Text=" Updated" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Zones/Create" DesignTimeRectangle="238, 344, 353, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT ZoneName'" FullSelectorArgument="&lt;webctrl id='ZoneName' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZoneName' tag='INPUT' type='text' class='form-control' aaname='Zone Name' /&gt;" Guid="325f1353-f356-4b1c-baf2-15337b9ceff7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWUAAAAqCAYAAABr/Eq2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVHhe7dixasJQAIXhvv/DFYfi0OLg4CSCi+ISbjnFBIWuxjN8H5whyZ1/LvkYANQQZYAiT1G+XG9jtz+MzfZnfH59m5nZi5bOprfp7qMlyvmQQ8fTeUzTdH8LwCuks+ltuvsY5iXKKXYOALCedDf9nS1RTq3dkAHWle6mv7MlyvnHAcD6HvsrygBvJsoARUQZoIgoAxQRZYAiogxQRJQBiogyQBFRBigiygBFRBmgiCgDFBFlgCKiDFBElAGKiDJAEVEGKCLKAEVEGaCIKAMUEWWAIqIMUESUAYqIMkARUQYoIsoARUQZoIgoAxQRZYAi/0Z5s/0Z0zTdnwBYQ7qb/s6WKO/2h3E8ne9PAKwh3U1/Z0uUL9fbX61zwI0Z4LXS2fQ23U1/Z0uUIx9S7BzKPw4zM3vN0tn09jHI8RRlAN5LlAFqjPELb4LmDP+sBs0AAAAASUVORK5CYII=" InformativeScreenshot="c2dee19415b4c993ad819f801d9c23f0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create Zone - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -154,7 +179,7 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Zone Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="66b6ec54-0743-40c5-8968-94a294367ed2" Text="Updated Zones Description" Version="V1">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Zone Description'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="66b6ec54-0743-40c5-8968-94a294367ed2" Text="[zoneDescription]" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Zones/Create" DesignTimeRectangle="238, 430, 353, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT ZoneDescription'" FullSelectorArgument="&lt;webctrl id='ZoneDescription' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZoneDescription' tag='INPUT' type='text' class='form-control' aaname='Zone Description' /&gt;" Guid="88ac2254-e6b0-4f56-a3a9-8e42c1777156" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWUAAAAqCAYAAABr/Eq2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVHhe7dixasJQAIXhvv/DFYfi0OLg4CSCi+ISbjnFBIWuxjN8H5whyZ1/LvkYANQQZYAiT1G+XG9jtz+MzfZnfH59m5nZi5bOprfp7qMlyvmQQ8fTeUzTdH8LwCuks+ltuvsY5iXKKXYOALCedDf9nS1RTq3dkAHWle6mv7MlyvnHAcD6HvsrygBvJsoARUQZoIgoAxQRZYAiogxQRJQBiogyQBFRBigiygBFRBmgiCgDFBFlgCKiDFBElAGKiDJAEVEGKCLKAEVEGaCIKAMUEWWAIqIMUESUAYqIMkARUQYoIsoARUQZoIgoAxQRZYAi/0Z5s/0Z0zTdnwBYQ7qb/s6WKO/2h3E8ne9PAKwh3U1/Z0uUL9fbX61zwI0Z4LXS2fQ23U1/Z0uUIx9S7BzKPw4zM3vN0tn09jHI8RRlAN5LlAFqjPELb4LmDP+sBs0AAAAASUVORK5CYII=" InformativeScreenshot="bfee9e451e8adbe6afe8bf4ad5d927c6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create Zone - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>

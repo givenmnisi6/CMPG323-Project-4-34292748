@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Create_Zone" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="678,3291" sap2010:WorkflowViewState.IdRef="Create_Zone_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Create_Zone" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ZoneDataOut" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>678,3400</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Create_Zone_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
@@ -99,7 +107,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create_Zones" sap:VirtualizedContainerService.HintSize="636,3226" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create_Zones" sap:VirtualizedContainerService.HintSize="636,3335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="zoneData" />
     </Sequence.Variables>
@@ -108,13 +116,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="574,674" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="574,784" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540,578" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540,688" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -130,17 +138,25 @@
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
             </ueab:ExcelApplicationCard>
+            <Assign sap:VirtualizedContainerService.HintSize="478,70" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[ZoneDataOut]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">[zoneData]</InArgument>
+              </Assign.Value>
+            </Assign>
           </Sequence>
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Home Page - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="574,2390" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="66b6ec54-0743-40c5-8968-94a294367ed2" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Home Page - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="574,2389" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="66b6ec54-0743-40c5-8968-94a294367ed2" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2164" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2163" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,13 +167,13 @@
                 <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/" DesignTimeRectangle="8, 304, 200, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Zones'" FullSelectorArgument="&lt;webctrl aaname='Zones' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Zones' tag='A' type='' class='nav-link text-dark' check:innerText='Zones' /&gt;" Guid="083270ec-0179-4d8f-8f97-ace761a9d28f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIxSURBVHhe7dgxTuNQAIRhDkVFtZeJlI4z0FJwAnoaDkBPQccBKHKH3Qs8IJ6JH37P41hrVmL1j/Q12AkU/mOHC6987PDnN4AOT7kQDJB4yoVggMRTLgQDJJ5yIRgg8ZQLwQCJp1wIBkg85UIwQOIpF4IBEk+5EAyQeMqFYIDEUy4EAySeciEYIPGUC8EAiadcCAZIPOVCMEDiKReCARJPuWwQzMttubz6Fd28dF4H/ACeciEYIPGUyzc9klUR7R7f+ucAP4CnXL4jmOdy47vL9UN5nRx/fdyfYhrsy/2hd/y2PNXv9aG5Ux0eyq46PrxmPL70u4AlnnLZOpi3cn/dv3i/Hms5hvEi35ddc371nrOPgsM5bSyfCAbreMpl22Dqi7S5G1QX+Hisikh3o/o9/DjXvm/1urvn5r0+z3m60/HOXQ44l6dcNgxm4XvLeNHPPTZN7wzVedWj1xDM10e1qePvb+5A3F2wnqdcNgqm/i4x84l++sTfIpjmu8uE7zqd8/gnBNbwlMsWwdTfTcKn+OpHsjPvMKdHsqT3CAcs85TL3wcz3jnmDRd5HVbLEZ0XTH3ehMKb+7vGWIFlnnL5l8HMnZ8f0Y4/7wRz1PtPWQiGWLCWp1w2/NIP/Ic85UIwQOIpF4IBEk+5EAyQeMqFYIDEUy4EAySeciEYIPGUC8EAiadcCAZIPOVCMEDiKReCARJPuRAMkHjKhWCAxFMuBAMknnIhGCDxlAvBAMmwUt4B782ZQ3BW//oAAAAASUVORK5CYII=" InformativeScreenshot="f6967360d91f47fe38d119502c0dac47.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home Page - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ZoneData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,1834" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ZoneData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,1833" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,1708" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,1707" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="zoneName" />
                       <Variable x:TypeArguments="x:String" Name="zoneDescription" />

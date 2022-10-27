@@ -14,7 +14,7 @@
 - The user can open the project here and download it & run it via UiPath.
 - The user needs to first create go to their UiPath Orchestrator, then go to Assets & add an Asset. 
 - It should be called LoginCredentials with the following Credentials, after you Save.
- - After that you just Run the project and everything will follow.
+ - After that you just Run the Main.xalm the project and everything will follow.
 
 | Credentials   | User            | 
 | :------------ |:---------------:|

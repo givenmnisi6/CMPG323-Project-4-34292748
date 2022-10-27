@@ -14,7 +14,7 @@
 ## Manual for the Project
 - The user can open the project here and download it & run it via UiPath.
 - The user needs to first create go to their UiPath Orchestrator, then go to Assets & add an Asset. 
-- It should be called LoginCredentials with the following Credentials.
+- It should be called LoginCredentials with the following Credentials, after you Save.
 
 | Credentials   | User            | 
 | :------------ |:---------------:|
@@ -23,6 +23,11 @@
 
 - This is needed so that credentials are not stored anywhere where they are vulnerable.
 
+## Assets
+<img src="/Images/Assets.PNG" alt="Assets">
+
+## Login Credentials
+<img src="/Images/Credentials.PNG" alt="Credentials">
 
 ## Phase 1 - GitHub Administration
 - While I'm undergoing training, I've created and configured my GitHub repository.

@@ -5,13 +5,16 @@
 - Robotic process automation (RPA) it is the use of AI & machine learning to replicate human activities in a manner similar to how a person would carry out a process. Typically, this refers to automation on the "front end" or UI (User Interface). RPA is frequently used to automate laborious, repetitive processes so that workers have more time to focus on creative work. 
 - RPAs are software applications that can configure tasks and automate them. Some popular RPA tools are UiPath, Automation Anywhere, blueprism, PEGA etc.
 
-### Benefits of RPA
-Robotic process automation streamlines workflows, which makes organizations more profitable, flexible, and responsive. It also increases employee satisfaction, engagement, and productivity by removing mundane tasks from their workdays.
-- Accelerated transformation: Among global executives, 63% say RPA is a major component in digital transformation.
-- Higher accuracy: 57% say RPA reduces manual errors.
 
+## Pre-requisites
+- UiPath
+- Microsoft Edge
+- Microsoft Excel
 
 ## Manual for the Project
+- The user can open the project here and download it & run it via UiPath
+<img src="/Images/Context diagram.png" alt="Context Diagram">
+
 
 ## Phase 1 - GitHub Administration
 - While I'm undergoing training, I've created and configured my GitHub repository.

@@ -12,8 +12,16 @@
 - Microsoft Excel
 
 ## Manual for the Project
-- The user can open the project here and download it & run it via UiPath
-<img src="/Images/Context diagram.png" alt="Context Diagram">
+- The user can open the project here and download it & run it via UiPath.
+- The user needs to first create go to their UiPath Orchestrator, then go to Assets & add an Asset. 
+- It should be called LoginCredentials with the following Credentials.
+
+| Credentials   | User            | 
+| :------------ |:---------------:|
+| Email         | john@gmail.com  | 
+| Password      | Abc123!         | 
+
+- This is needed so that credentials are not stored anywhere where they are vulnerable.
 
 
 ## Phase 1 - GitHub Administration

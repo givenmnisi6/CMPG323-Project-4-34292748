@@ -26,7 +26,7 @@
 ## Assets
 <img src="/Images/Assets.PNG" alt="Assets">
 
-## Login Credentials
+## LoginCredentials
 <img src="/Images/Credentials.PNG" alt="Credentials">
 
 ## Phase 1 - GitHub Administration
@@ -42,6 +42,7 @@
 
 ## Phase 4 - Project Close-out
 - Published the UiPath solution to the UiPath Orchestrator.
+<img src="/Images/Publish.PNG" alt="Publish">
 
 ## Reference List
 - Khan, S., 2020. Comparative analysis of RPA tools-UiPath, automation anywhere and blueprism.<i> International Journal of Computer Science and Mobile Applications, </i> 8(11), pp.1-6.

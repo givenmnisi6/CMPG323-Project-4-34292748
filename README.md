@@ -48,7 +48,7 @@
 - Published the UiPath solution to the UiPath Orchestrator.
 <img src="/Images/Publish.PNG" alt="Publish">
 
-## Stretch Task
+## Stretch Tasks
 - I used different Workflows for each Zone, Category & Devices
 - I created a Log in Workflow whereby you only Log In and linked them with another in the following Flowchart
 <img src="/Images/Task.PNG" alt="Task">

@@ -5,7 +5,6 @@
 - Robotic process automation (RPA) it is the use of AI & machine learning to replicate human activities in a manner similar to how a person would carry out a process. Typically, this refers to automation on the "front end" or UI (User Interface). RPA is frequently used to automate laborious, repetitive processes so that workers have more time to focus on creative work. 
 - RPAs are software applications that can configure tasks and automate them. Some popular RPA tools are UiPath, Automation Anywhere, blueprism, PEGA etc.
 
-
 ## Pre-requisites
 - UiPath
 - Microsoft Edge
@@ -15,6 +14,7 @@
 - The user can open the project here and download it & run it via UiPath.
 - The user needs to first create go to their UiPath Orchestrator, then go to Assets & add an Asset. 
 - It should be called LoginCredentials with the following Credentials, after you Save.
+ - After that you just Run the project and everything will follow.
 
 | Credentials   | User            | 
 | :------------ |:---------------:|
@@ -27,7 +27,7 @@
 <img src="/Images/Assets.PNG" alt="Assets">
 
 ## LoginCredentials
-<img src="/Images/Credentials.PNG" alt="Credentials">
+<img src="/Images/LogInCredentials.PNG" alt="Credentials">
 
 ## Log In
 - Also make sure that the AssetName in your Log in Workflow is the same as the one on UiPath Orchestrator
@@ -55,9 +55,13 @@
 
 ## Arguments
 - In order for the reading of the Excel file in all the Workflows to occur, I initialized a variable and imported it to the each argument in the Flowcharts.
+- Each and every workflow has its Arguments that are passed in.
 <img src="/Images/Argument.PNG" alt="Argument">
 
+## Arguments Invonked
+<img src="/Images/Logins.PNG" alt="Login">
 
+- Finally also the Login In Credentials is also a Stretch Task it is attached at the top.
 ## Reference List
 - Khan, S., 2020. Comparative analysis of RPA tools-UiPath, automation anywhere and blueprism.<i> International Journal of Computer Science and Mobile Applications, </i> 8(11), pp.1-6.
 - Wang, D., 2019. <i>Requirement Specifications for RPA software-UiPath</i>.
